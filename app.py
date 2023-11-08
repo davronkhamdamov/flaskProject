@@ -1,26 +1,17 @@
 import random
 from flask_cors import CORS
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 CORS(app)
 
-items = [
-    {'id': 1, 'name': 'First'},
-    {'id': 2, 'name': 'Second'},
-    {'id': 3, 'name': 'Third'},
-    {'id': 4, 'name': 'Fourth'},
-    {'id': 5, 'name': 'Fifth'},
-    {'id': 6, 'name': 'Sixth'},
-]
 
-
-# Define a route to retrieve all items
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
 def get_items():
-    random.shuffle(items)
-    return jsonify(items)
+    request_body = request.get_json()
+    random.shuffle(request_body)
+    return jsonify(request_body)
 
 
 if __name__ == '__main__':
