@@ -7,11 +7,11 @@ app = Flask(__name__)
 CORS(app)
 
 items = [
-    {'id': 1, 'name': 'Sarah Johnson'},
-    {'id': 2, 'name': 'David Smith'},
-    {'id': 3, 'name': 'Emily Brown'},
-    {'id': 4, 'name': 'Michael Davis'},
-    {'id': 5, 'name': 'Jessica Wilson'},
+    {'id': 1, 'name': 'First'},
+    {'id': 2, 'name': 'Second'},
+    {'id': 3, 'name': 'Third'},
+    {'id': 4, 'name': 'Fourth'},
+    {'id': 5, 'name': 'Fifth'},
 ]
 
 
